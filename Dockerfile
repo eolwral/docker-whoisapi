@@ -5,10 +5,6 @@
 # Pull base image.
 FROM dockerfile/ubuntu
 
-# Fix IPv6 DNS issue
-RUN sudo echo "nameserver 8.8.8.8" > /etc/resolv.conf
-RUN sudo echo "nameserver 8.8.4.4" >> /etc/resolv.conf
-
 # Install Nginx and Redis
 RUN sudo apt-get install --reinstall ca-certificates
 RUN sudo apt-get install software-properties-common
