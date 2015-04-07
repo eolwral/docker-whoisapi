@@ -3,7 +3,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM registry.hub.docker.com/_/ubuntu/
 
 # Install Nginx and Redis
 RUN sudo apt-get install --reinstall ca-certificates
