@@ -6,12 +6,12 @@
 FROM library/ubuntu
 
 # Install Nginx and Redis
-RUN sudo apt-get install --reinstall ca-certificates
-RUN sudo apt-get install software-properties-common
+RUN sudo apt-get --yes install --reinstall ca-certificates 
+RUN sudo apt-get --yes install software-properties-common
 RUN sudo add-apt-repository ppa:nginx/development
 RUN sudo apt-get --yes update
 RUN sudo apt-get --yes upgrade --force-yes
-RUN sudo apt-get --yes install supervisor nginx redis-server
+RUN sudo apt-get --yes install supervisor nginx redis-server wget
 
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*
